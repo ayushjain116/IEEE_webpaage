@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👌STRING CONVERTER</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: auto;
+        }
+
+        body {
+            background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Laptop-HD-Pictures.jpg");
+            background-repeat: no-repeat;
+            background-size: 100rem 50rem;
+        }
+
+        .container {
+            display: flex;
+
+            margin-top: 10%;
+        }
+
+        h1 {
+            margin: 2rem;
+            font-size: 4rem;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    <script>
+        var up, low, c;
+
+        function upper() {
+            var upc = document.getElementById("name").value;
+            up = upc.toUpperCase();
+            document.getElementById("upr").innerHTML = up;
+        }
+
+        function lower() {
+            var upc = document.getElementById("name").value;
+            low = upc.toLowerCase();
+            document.getElementById("lwr").innerHTML = low;
+        }
+
+        function number() {
+            var upc = document.getElementById("name").value;
+            c = upc.length;
+            document.getElementById("count").innerHTML = c;
+        }
+        
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>TEXT LAB</h1>
+            <label for="">Enter String:</label>
+            <input type="text" id="name">
+            <br>
+            <br>
+            <button id="first" onclick="number()">Charaters</button> :<label id="count"></label>
+            <br>
+            <br>
+            <button id="second" onclick="upper()">To Uppercase</button> :<label id="upr"></label>
+            <br>
+            <br>
+            <button id="third" onclick="lower()">To Lowercase</button> :<label id="lwr"></label>
+        </div>
+    </div>
+</body>
+
+</html>
